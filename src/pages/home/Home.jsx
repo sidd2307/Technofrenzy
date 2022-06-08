@@ -1,5 +1,6 @@
 import React from "react";
 import Carousal from "../../components/Carousal";
+import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div>
       <NavBar />
       <Carousal />
+      <Footer />
     </div>
   );
 }
