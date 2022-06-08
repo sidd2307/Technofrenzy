@@ -18,7 +18,7 @@ export default function Register() {
       <h1 style={{ marginBottom: 20 }}>Sign Up</h1>
       {success && (
         <Alert variant="success" onClose={() => setsuccess(false)} dismissible>
-          Sign in successfully!
+          Signed up successfully!
         </Alert>
       )}
       {error && (

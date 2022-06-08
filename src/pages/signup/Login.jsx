@@ -19,7 +19,7 @@ export default function Login() {
       <h1 style={{ marginBottom: 20 }}>Sign In</h1>
       {success && (
         <Alert variant="success" onClose={() => setsuccess(false)} dismissible>
-          Sign in successfully!
+          Signed in successfully!
         </Alert>
       )}
       {error && (
