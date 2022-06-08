@@ -18,7 +18,13 @@ export default function NavBar() {
       {[false].map((expand) => (
         <Navbar key={expand} bg="light" expand={expand} className="mb-3">
           <Container fluid>
-            <Navbar.Brand href="#">TechnoFrenzy</Navbar.Brand>
+            <Navbar.Brand
+              onClick={() => {
+                navigate("/");
+              }}
+            >
+              TechnoFrenzy
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
