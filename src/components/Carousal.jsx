@@ -8,7 +8,7 @@ export default function Carousal() {
       <Carousel style={{ height: 500 }}>
         {carousalData.map((item, key) => {
           return (
-            <Carousel.Item>
+            <Carousel.Item key={key}>
               <img
                 style={{ height: 500, objectFit: "fill" }}
                 className="d-block w-100 h-500"
