@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Card, Col, Nav, Row, Tab } from "react-bootstrap";
 import Sonnet from "./Sonnet";
 import { categoryTags, questions } from "../static/data";
+import { BiDownvote, BiUpvote } from "react-icons/bi";
 
 export default function Body() {
   const [selectedcategory, setselectedcategory] = useState("react");
@@ -43,7 +44,18 @@ export default function Body() {
                         <Card.Body>
                           <Card.Title>{item.heading}</Card.Title>
                           <Card.Text>{item.description}</Card.Text>
-                          <Button variant="primary">View</Button>
+                          <div
+                            style={{
+                              width: 200,
+                              display: "flex",
+                              flexDirection: "row",
+                              justifyContent: "space-between",
+                            }}
+                          >
+                            <BiUpvote color="green" size={35} />
+                            <BiDownvote color="red" size={35} />
+                            <Button variant="primary">View</Button>
+                          </div>
                         </Card.Body>
                       </Card>
                     )}
