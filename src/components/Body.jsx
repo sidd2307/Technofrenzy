@@ -3,9 +3,11 @@ import { Button, Card, Col, Nav, Row, Tab } from "react-bootstrap";
 import Sonnet from "./Sonnet";
 import { categoryTags, questions } from "../static/data";
 import { BiDownvote, BiUpvote } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 export default function Body() {
   const [selectedcategory, setselectedcategory] = useState("react");
+  let navigate = useNavigate();
   return (
     <div>
       <Tab.Container
@@ -43,8 +45,22 @@ export default function Body() {
                         <Card.Header>{item.categoryNameFull}</Card.Header>
                         <Card.Body>
                           <Card.Title>{item.heading}</Card.Title>
-                          <Card.Text>{item.description}</Card.Text>
-                          <div
+                          <Card.Text>
+                            {item.description.substring(0, 197)}
+                            <span
+                              style={{
+                                color: "gray",
+                                fontWeight: "bolder",
+                                cursor: "pointer",
+                              }}
+                              onClick={() => {
+                                navigate(`/question/${item.id}`);
+                              }}
+                            >
+                              &nbsp; read more...
+                            </span>
+                          </Card.Text>
+                          {/* <div
                             style={{
                               width: 200,
                               display: "flex",
@@ -52,10 +68,19 @@ export default function Body() {
                               justifyContent: "space-between",
                             }}
                           >
-                            <BiUpvote color="green" size={35} />
-                            <BiDownvote color="red" size={35} />
-                            <Button variant="primary">View</Button>
-                          </div>
+                            <div style={{ display: "flex" }}>
+                              <BiUpvote color="green" size={35} />
+                            </div>
+                            <BiDownvote color="red" size={35} /> */}
+                          <Button
+                            onClick={() => {
+                              navigate(`/question/${item.id}`);
+                            }}
+                            variant="primary"
+                          >
+                            View
+                          </Button>
+                          {/* </div> */}
                         </Card.Body>
                       </Card>
                     )}

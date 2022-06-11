@@ -5,6 +5,7 @@ import {
   Route,
 } from "react-router-dom";
 import Home from "./pages/home/Home";
+import IndividualQuestionPage from "./pages/individualquestion/IndividualQuestionPage";
 
 // pages import
 import Login from './pages/signup/Login';
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/question/:questionid" element={<IndividualQuestionPage />} />
         </Routes>
       </BrowserRouter>
     </div>
