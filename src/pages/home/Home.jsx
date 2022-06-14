@@ -1,4 +1,5 @@
 import React from "react";
+import AskQuestion from "../../components/AskQuestion";
 import Body from "../../components/Body";
 import Carousal from "../../components/Carousal";
 import Footer from "../../components/Footer";
@@ -24,7 +25,7 @@ export default function Home() {
       <NavBar />
       <Carousal />
       {/* <Test code={code} /> */}
-      <br />
+      <AskQuestion />
       <Body />
       <br />
       <Footer />
