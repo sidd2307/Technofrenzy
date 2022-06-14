@@ -42,6 +42,7 @@ export const categoryTags = [
 export const questions = [
     {
         id: 1,
+        datePosted: "06/24/2008",
         heading: "How does React work?",
         categoryName: "react",
         categoryNameFull: "ReactJS",
@@ -49,6 +50,7 @@ export const questions = [
     },
     {
         id: 2,
+        datePosted: "06/24/2001",
         heading: "How does Angular work?",
         categoryName: "angular",
         categoryNameFull: "Angular",
@@ -56,6 +58,7 @@ export const questions = [
     },
     {
         id: 3,
+        datePosted: "06/26/2019",
         heading: "How does Django work?",
         categoryName: "django",
         categoryNameFull: "Django",
@@ -63,6 +66,7 @@ export const questions = [
     },
     {
         id: 4,
+        datePosted: "06/10/2022",
         heading: "How does NodeJS work?",
         categoryName: "nodejs",
         categoryNameFull: "NodeJS",
@@ -70,6 +74,7 @@ export const questions = [
     },
     {
         id: 5,
+        datePosted: "06/24/2002",
         heading: "How does React-Native work?",
         categoryName: "reactnative",
         categoryNameFull: "React-Native",
@@ -77,6 +82,7 @@ export const questions = [
     },
     {
         id: 6,
+        datePosted: "06/24/2008",
         heading: "How does NodeJE run a server?",
         categoryName: "nodejs",
         categoryNameFull: "NodeJS",

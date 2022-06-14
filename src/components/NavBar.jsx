@@ -22,6 +22,7 @@ export default function NavBar() {
               onClick={() => {
                 navigate("/");
               }}
+              style={{ cursor: "pointer" }}
             >
               TechnoFrenzy
             </Navbar.Brand>
