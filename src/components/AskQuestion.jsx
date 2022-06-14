@@ -1,7 +1,9 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function MyVerticallyCenteredModal(props) {
+  const navigate = useNavigate();
   return (
     <Modal
       {...props}
@@ -15,17 +17,21 @@ function MyVerticallyCenteredModal(props) {
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>To get you the best answers, we’ve provided some guidance:</h4>
-        <p>
-          <ul>
-            <li>Summarize the problem</li>
-            <li>Describe what you’ve tried</li>
-            <li>When appropriate, show some code</li>
-          </ul>
-        </p>
+        <h6>To get you the best answers, we’ve provided some guidance:</h6>
+        <ul>
+          <li>Explain the problem clearly</li>
+          <li>Show the approach you tried</li>
+          <li>If possible, show some code</li>
+        </ul>
       </Modal.Body>
       <Modal.Footer>
-        <Button>Go Ahead!</Button>
+        <Button
+          onClick={() => {
+            navigate("/askquestion");
+          }}
+        >
+          Go Ahead!
+        </Button>
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>

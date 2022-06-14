@@ -1,5 +1,5 @@
 import React from "react";
-import "./question.css";
+import "./css/question.css";
 
 // utils
 import getAge from "../utils/getAge";
