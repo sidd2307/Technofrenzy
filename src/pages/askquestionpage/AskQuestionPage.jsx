@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form, Alert } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import codetostring from "../../utils/codeToString";
 import "../css/formpage.css";
 
 export default function AskQuestionPage() {
@@ -8,10 +9,23 @@ export default function AskQuestionPage() {
   const [success, setsuccess] = useState(false);
   const [error, seterror] = useState(true);
 
+  const [postedquestion, setpostedquestion] = useState({});
+
   const handleSignIn = (e) => {
     setsuccess(true);
     seterror(false);
     e.preventDefault();
+    console.log(postedquestion);
+
+    const res = codetostring(postedquestion.code);
+
+    console.log(res);
+  };
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setpostedquestion((values) => ({ ...values, [name]: value }));
   };
 
   return (
@@ -33,18 +47,41 @@ export default function AskQuestionPage() {
       <Form>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Heading</Form.Label>
-          <Form.Control type="text" placeholder="Enter heading" />
+          <Form.Control
+            type="text"
+            name="heading"
+            value={postedquestion.heading || ""}
+            onChange={handleChange}
+            placeholder="Enter heading"
+          />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
           <Form.Label>Description</Form.Label>
-          <Form.Control as="textarea" rows={3} />
+          <Form.Control
+            as="textarea"
+            rows={3}
+            name="description"
+            value={postedquestion.description || ""}
+            onChange={handleChange}
+          />
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
           <Form.Label>Code</Form.Label>
-          <Form.Control as="textarea" rows={3} />
+          <Form.Control
+            as="textarea"
+            rows={3}
+            name="code"
+            value={postedquestion.code || ""}
+            onChange={handleChange}
+          />
         </Form.Group>
-        <Form.Select aria-label="Select Tags">
+        <Form.Select
+          aria-label="Select Tags"
+          name="tag"
+          value={postedquestion.tag || ""}
+          onChange={handleChange}
+        >
           <option>Select Tags</option>
           <option value="react">React</option>
           <option value="angular">Angular</option>

@@ -36,6 +36,7 @@ export default function IndividualQuestionPage() {
                 description={item.description}
                 categoryNameFull={item.categoryNameFull}
                 datePosted={item.datePosted}
+                code={item.code}
               />
             )}
           </div>
