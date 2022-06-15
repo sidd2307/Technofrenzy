@@ -19,6 +19,7 @@ export default function Test({ code, technology = "javascript" }) {
   return (
     <div
       className="code_display"
+      style={{ color: "#e6e1dc", backgroundColor: "##2b2b2b" }}
       dangerouslySetInnerHTML={{
         __html: markdownParser.render(
           `\`\`\` ${technology}\n${newcode}\n\`\`\``
