@@ -49,7 +49,43 @@ export const questions = [
         categoryName: "react",
         categoryNameFull: "ReactJS",
         description: "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.",
-        code: "int LinearSearch(int Array[], int searchValue)\n{\n    for (i=0; i<N; i++)\n    {\n        if (Array[i]==searchValue)\n            return i;\n    }\n    return -1;\n}"
+        code: "int LinearSearch(int Array[], int searchValue)\n{\n    for (i=0; i<N; i++)\n    {\n        if (Array[i]==searchValue)\n            return i;\n    }\n    return -1;\n}",
+        answers: [
+            {
+                author: "Siddheshwar Panda",
+                explanation: `Ensure that your array is sorted since this is the crux of a binary search. Any indexed/random-access data structure can be binary searched. So when you say using "just an array", I would say arrays are the most basic/common data structure that a binary search is employed on. You can do it recursively (easiest) or iteratively. Time complexity of a binary search is O(log N) which is considerably faster than a linear search of checking each element at O(N). Here are some examples from Wikipedia: Binary Search Algorithm:`,
+                codeexplanation: codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
+                    if (high < low)  
+                        return -1 // not found  
+                    mid = low + ((high - low) / 2) 
+                    if (A[mid] > value)  
+                        return BinarySearch(A, value, low, mid-1)  
+                    else if (A[mid] < value)  
+                        return BinarySearch(A, value, mid+1, high)  
+                    else
+                       return mid // found
+                    }`),
+                upvotes: 10,
+                downvotes: 7
+            },
+            {
+                author: "Siddheshwar Panda",
+                explanation: `Ensure that your array is sorted since this is the crux of a binary search. Any indexed/random-access data structure can be binary searched. So when you say using "just an array", I would say arrays are the most basic/common data structure that a binary search is employed on. You can do it recursively (easiest) or iteratively. Time complexity of a binary search is O(log N) which is considerably faster than a linear search of checking each element at O(N). Here are some examples from Wikipedia: Binary Search Algorithm:`,
+                codeexplanation: codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
+                    if (high < low)  
+                        return -1 // not found  
+                    mid = low + ((high - low) / 2) 
+                    if (A[mid] > value)  
+                        return BinarySearch(A, value, low, mid-1)  
+                    else if (A[mid] < value)  
+                        return BinarySearch(A, value, mid+1, high)  
+                    else
+                       return mid // found
+                    }`),
+                upvotes: 10,
+                downvotes: 7
+            },
+        ]
     },
     {
         id: 2,
@@ -73,7 +109,43 @@ export const questions = [
         arr[j] = temp;
         System.out.println(arr[i]);//I print the in ascending order 
     }
-        }`)
+        }`),
+        answers: [
+            {
+                author: "Siddheshwar Panda",
+                explanation: `Ensure that your array is sorted since this is the crux of a binary search. Any indexed/random-access data structure can be binary searched. So when you say using "just an array", I would say arrays are the most basic/common data structure that a binary search is employed on. You can do it recursively (easiest) or iteratively. Time complexity of a binary search is O(log N) which is considerably faster than a linear search of checking each element at O(N). Here are some examples from Wikipedia: Binary Search Algorithm:`,
+                codeexplanation: codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
+                    if (high < low)  
+                        return -1 // not found  
+                    mid = low + ((high - low) / 2) 
+                    if (A[mid] > value)  
+                        return BinarySearch(A, value, low, mid-1)  
+                    else if (A[mid] < value)  
+                        return BinarySearch(A, value, mid+1, high)  
+                    else
+                       return mid // found
+                    }`),
+                upvotes: 10,
+                downvotes: 7
+            },
+            {
+                author: "Siddheshwar Panda",
+                explanation: `Ensure that your array is sorted since this is the crux of a binary search. Any indexed/random-access data structure can be binary searched. So when you say using "just an array", I would say arrays are the most basic/common data structure that a binary search is employed on. You can do it recursively (easiest) or iteratively. Time complexity of a binary search is O(log N) which is considerably faster than a linear search of checking each element at O(N). Here are some examples from Wikipedia: Binary Search Algorithm:`,
+                codeexplanation: codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
+                    if (high < low)  
+                        return -1 // not found  
+                    mid = low + ((high - low) / 2) 
+                    if (A[mid] > value)  
+                        return BinarySearch(A, value, low, mid-1)  
+                    else if (A[mid] < value)  
+                        return BinarySearch(A, value, mid+1, high)  
+                    else
+                       return mid // found
+                    }`),
+                upvotes: 10,
+                downvotes: 7
+            },
+        ]
     },
     {
         id: 3,
@@ -91,7 +163,43 @@ export const questions = [
             url(r'^show/([0-9]+)/$',views.getId),
             url(r'^update/([0-9]+)/$',views.update,name='update'),
             url(r'^delete/([0-9]+)/$',views.delete),
-        ]`)
+        ]`),
+        answers: [
+            {
+                author: "Siddheshwar Panda",
+                explanation: `Ensure that your array is sorted since this is the crux of a binary search. Any indexed/random-access data structure can be binary searched. So when you say using "just an array", I would say arrays are the most basic/common data structure that a binary search is employed on. You can do it recursively (easiest) or iteratively. Time complexity of a binary search is O(log N) which is considerably faster than a linear search of checking each element at O(N). Here are some examples from Wikipedia: Binary Search Algorithm:`,
+                codeexplanation: codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
+                    if (high < low)  
+                        return -1 // not found  
+                    mid = low + ((high - low) / 2) 
+                    if (A[mid] > value)  
+                        return BinarySearch(A, value, low, mid-1)  
+                    else if (A[mid] < value)  
+                        return BinarySearch(A, value, mid+1, high)  
+                    else
+                       return mid // found
+                    }`),
+                upvotes: 10,
+                downvotes: 7
+            },
+            {
+                author: "Siddheshwar Panda",
+                explanation: `Ensure that your array is sorted since this is the crux of a binary search. Any indexed/random-access data structure can be binary searched. So when you say using "just an array", I would say arrays are the most basic/common data structure that a binary search is employed on. You can do it recursively (easiest) or iteratively. Time complexity of a binary search is O(log N) which is considerably faster than a linear search of checking each element at O(N). Here are some examples from Wikipedia: Binary Search Algorithm:`,
+                codeexplanation: codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
+                    if (high < low)  
+                        return -1 // not found  
+                    mid = low + ((high - low) / 2) 
+                    if (A[mid] > value)  
+                        return BinarySearch(A, value, low, mid-1)  
+                    else if (A[mid] < value)  
+                        return BinarySearch(A, value, mid+1, high)  
+                    else
+                       return mid // found
+                    }`),
+                upvotes: 10,
+                downvotes: 7
+            },
+        ]
     },
     {
         id: 4,
@@ -120,7 +228,43 @@ export const questions = [
                 });
         
             });
-        module.exports = router;`)
+        module.exports = router;`),
+        answers: [
+            {
+                author: "Siddheshwar Panda",
+                explanation: `Ensure that your array is sorted since this is the crux of a binary search. Any indexed/random-access data structure can be binary searched. So when you say using "just an array", I would say arrays are the most basic/common data structure that a binary search is employed on. You can do it recursively (easiest) or iteratively. Time complexity of a binary search is O(log N) which is considerably faster than a linear search of checking each element at O(N). Here are some examples from Wikipedia: Binary Search Algorithm:`,
+                codeexplanation: codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
+                    if (high < low)  
+                        return -1 // not found  
+                    mid = low + ((high - low) / 2) 
+                    if (A[mid] > value)  
+                        return BinarySearch(A, value, low, mid-1)  
+                    else if (A[mid] < value)  
+                        return BinarySearch(A, value, mid+1, high)  
+                    else
+                       return mid // found
+                    }`),
+                upvotes: 10,
+                downvotes: 7
+            },
+            {
+                author: "Siddheshwar Panda",
+                explanation: `Ensure that your array is sorted since this is the crux of a binary search. Any indexed/random-access data structure can be binary searched. So when you say using "just an array", I would say arrays are the most basic/common data structure that a binary search is employed on. You can do it recursively (easiest) or iteratively. Time complexity of a binary search is O(log N) which is considerably faster than a linear search of checking each element at O(N). Here are some examples from Wikipedia: Binary Search Algorithm:`,
+                codeexplanation: codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
+                    if (high < low)  
+                        return -1 // not found  
+                    mid = low + ((high - low) / 2) 
+                    if (A[mid] > value)  
+                        return BinarySearch(A, value, low, mid-1)  
+                    else if (A[mid] < value)  
+                        return BinarySearch(A, value, mid+1, high)  
+                    else
+                       return mid // found
+                    }`),
+                upvotes: 10,
+                downvotes: 7
+            },
+        ]
     },
     {
         id: 5,
@@ -161,7 +305,43 @@ export const questions = [
                 <button>{buttonText}</button>
               </form>
             )
-          }`)
+          }`),
+        answers: [
+            {
+                author: "Siddheshwar Panda",
+                explanation: `Ensure that your array is sorted since this is the crux of a binary search. Any indexed/random-access data structure can be binary searched. So when you say using "just an array", I would say arrays are the most basic/common data structure that a binary search is employed on. You can do it recursively (easiest) or iteratively. Time complexity of a binary search is O(log N) which is considerably faster than a linear search of checking each element at O(N). Here are some examples from Wikipedia: Binary Search Algorithm:`,
+                codeexplanation: codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
+                    if (high < low)  
+                        return -1 // not found  
+                    mid = low + ((high - low) / 2) 
+                    if (A[mid] > value)  
+                        return BinarySearch(A, value, low, mid-1)  
+                    else if (A[mid] < value)  
+                        return BinarySearch(A, value, mid+1, high)  
+                    else
+                       return mid // found
+                    }`),
+                upvotes: 10,
+                downvotes: 7
+            },
+            {
+                author: "Siddheshwar Panda",
+                explanation: `Ensure that your array is sorted since this is the crux of a binary search. Any indexed/random-access data structure can be binary searched. So when you say using "just an array", I would say arrays are the most basic/common data structure that a binary search is employed on. You can do it recursively (easiest) or iteratively. Time complexity of a binary search is O(log N) which is considerably faster than a linear search of checking each element at O(N). Here are some examples from Wikipedia: Binary Search Algorithm:`,
+                codeexplanation: codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
+                    if (high < low)  
+                        return -1 // not found  
+                    mid = low + ((high - low) / 2) 
+                    if (A[mid] > value)  
+                        return BinarySearch(A, value, low, mid-1)  
+                    else if (A[mid] < value)  
+                        return BinarySearch(A, value, mid+1, high)  
+                    else
+                       return mid // found
+                    }`),
+                upvotes: 10,
+                downvotes: 7
+            },
+        ]
     },
     {
         id: 6,
@@ -180,6 +360,42 @@ export const questions = [
               dispatch({ type: 'LOADING_FAILED', payload: error })
               throw error;
             }
-          }`)
+          }`),
+        answers: [
+            {
+                author: "Siddheshwar Panda",
+                explanation: `Ensure that your array is sorted since this is the crux of a binary search. Any indexed/random-access data structure can be binary searched. So when you say using "just an array", I would say arrays are the most basic/common data structure that a binary search is employed on. You can do it recursively (easiest) or iteratively. Time complexity of a binary search is O(log N) which is considerably faster than a linear search of checking each element at O(N). Here are some examples from Wikipedia: Binary Search Algorithm:`,
+                codeexplanation: codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
+                    if (high < low)  
+                        return -1 // not found  
+                    mid = low + ((high - low) / 2) 
+                    if (A[mid] > value)  
+                        return BinarySearch(A, value, low, mid-1)  
+                    else if (A[mid] < value)  
+                        return BinarySearch(A, value, mid+1, high)  
+                    else
+                       return mid // found
+                    }`),
+                upvotes: 10,
+                downvotes: 7
+            },
+            {
+                author: "Siddheshwar Panda",
+                explanation: `Ensure that your array is sorted since this is the crux of a binary search. Any indexed/random-access data structure can be binary searched. So when you say using "just an array", I would say arrays are the most basic/common data structure that a binary search is employed on. You can do it recursively (easiest) or iteratively. Time complexity of a binary search is O(log N) which is considerably faster than a linear search of checking each element at O(N). Here are some examples from Wikipedia: Binary Search Algorithm:`,
+                codeexplanation: codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
+                    if (high < low)  
+                        return -1 // not found  
+                    mid = low + ((high - low) / 2) 
+                    if (A[mid] > value)  
+                        return BinarySearch(A, value, low, mid-1)  
+                    else if (A[mid] < value)  
+                        return BinarySearch(A, value, mid+1, high)  
+                    else
+                       return mid // found
+                    }`),
+                upvotes: 10,
+                downvotes: 7
+            },
+        ]
     },
 ]

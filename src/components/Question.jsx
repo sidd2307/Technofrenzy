@@ -15,6 +15,8 @@ export default function Question(props) {
   const technology = "javascript";
   const temp = getAge(props.datePosted);
 
+  console.log(props.item);
+
   console.log(props.code);
   return (
     <div className="questioncomponent">
@@ -37,47 +39,44 @@ export default function Question(props) {
       />
 
       <div>
-        <h4>8 Answers</h4>
+        <h4>{props.item.answers.length} Answers</h4>
 
-        <Card>
-          <Card.Header>posted by Siddheshwar</Card.Header>
-          <Card.Body>
-            {/* <Card.Title>Special title treatment</Card.Title> */}
-            <Card.Text>
-              Ensure that your array is sorted since this is the crux of a
-              binary search. Any indexed/random-access data structure can be
-              binary searched. So when you say using "just an array", I would
-              say arrays are the most basic/common data structure that a binary
-              search is employed on. You can do it recursively (easiest) or
-              iteratively. Time complexity of a binary search is O(log N) which
-              is considerably faster than a linear search of checking each
-              element at O(N). Here are some examples from Wikipedia: Binary
-              Search Algorithm:
-            </Card.Text>
-            <Card.Text>
-              <div
-                className="code_display"
-                dangerouslySetInnerHTML={{
-                  __html: markdownParser.render(
-                    `\`\`\` ${technology}\n${codetostring(`BinarySearch(A[0..N-1], value, low, high) {  
-                      if (high < low)  
-                          return -1 // not found  
-                      mid = low + ((high - low) / 2) 
-                      if (A[mid] > value)  
-                          return BinarySearch(A, value, low, mid-1)  
-                      else if (A[mid] < value)  
-                          return BinarySearch(A, value, mid+1, high)  
-                      else
-                         return mid // found
-                      }`)}\n\`\`\``
-                  ),
-                }}
-              />
-            </Card.Text>
-            <Button variant="success">Upvote</Button> &nbsp;
-            <Button variant="danger">Downvote</Button>
-          </Card.Body>
-        </Card>
+        {props.item.answers.map((answer, key) => {
+          return (
+            <Card
+              key={key}
+              style={{ padding: 5, backgroundColor: "lightgray", margin: 5 }}
+            >
+              <Card.Header>
+                posted by {answer.author} &nbsp; &nbsp; &nbsp;{" "}
+                <span style={{ color: "#198754", fontWeight: "bolder" }}>
+                  {answer.upvotes} upvotes
+                </span>{" "}
+                &nbsp;&nbsp;&nbsp;{" "}
+                <span style={{ color: "#DC3545", fontWeight: "bolder" }}>
+                  {answer.downvotes} downvotes
+                </span>
+              </Card.Header>
+              <Card.Body>
+                <Card.Text>{answer.explanation}</Card.Text>
+                <Card.Text>
+                  <div
+                    className="code_display"
+                    dangerouslySetInnerHTML={{
+                      __html: markdownParser.render(
+                        `\`\`\` ${technology}\n${codetostring(
+                          answer.codeexplanation
+                        )}\n\`\`\``
+                      ),
+                    }}
+                  />
+                </Card.Text>
+                <Button variant="success">Upvote</Button> &nbsp;
+                <Button variant="danger">Downvote</Button>
+              </Card.Body>
+            </Card>
+          );
+        })}
       </div>
     </div>
   );
