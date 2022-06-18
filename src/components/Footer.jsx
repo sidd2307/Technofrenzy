@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import "./css/footer.css";
+import "../css/footer.css";
 
 export default function Footer() {
   const navigate = useNavigate();

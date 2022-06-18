@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Form, Alert } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import codetostring from "../../utils/codeToString";
-import "../css/formpage.css";
+import "../../css/formpage.css";
 
 export default function AskQuestionPage() {
   let navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Alert, Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import "../css/formpage.css";
+import "../../css/formpage.css";
 
 export default function Register() {
   let navigate = useNavigate();
