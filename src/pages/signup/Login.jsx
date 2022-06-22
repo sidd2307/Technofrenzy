@@ -32,11 +32,18 @@ export default function Login() {
         password: inputs.password,
       })
       .then((response) => {
+        console.log(response);
+
+        if (response.status === 201) {
+          seterror(false);
+          setsuccess(true);
+          addUser(response.data.response);
+          navigate("/");
+        } else {
+          seterror(true);
+          setsuccess(false);
+        }
         console.log(response.data.response);
-        seterror(false);
-        setsuccess(true);
-        addUser(response.data.response);
-        navigate("/");
       });
   };
 
