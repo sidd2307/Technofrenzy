@@ -10,8 +10,11 @@ import {
   Offcanvas,
 } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import useUserStore from "../store";
 
 export default function NavBar() {
+  const { userInfo } = useUserStore();
+  const removeUser = useUserStore((state) => state.removeUser);
   const navigate = useNavigate();
   return (
     <div>
@@ -34,7 +37,9 @@ export default function NavBar() {
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  TechnoFrenzy
+                  {userInfo.name !== undefined
+                    ? `Hi ${userInfo.name}`
+                    : `TechnoFrenzy`}
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
@@ -56,6 +61,32 @@ export default function NavBar() {
                   >
                     Register
                   </Nav.Link>
+                  {userInfo.name !== undefined ? (
+                    <>
+                      <Nav.Link
+                        // href="#action2"
+                        onClick={() => {
+                          removeUser();
+                          navigate("/register");
+                        }}
+                        style={{ color: "red" }}
+                      >
+                        Logout
+                      </Nav.Link>
+                    </>
+                  ) : (
+                    <></>
+                  )}
+                  {/* <Nav.Link
+                    // href="#action2"
+                    onClick={() => {
+                      removeUser();
+                      navigate("/register");
+                    }}
+                    style={{ color: "red" }}
+                  >
+                    Logout
+                  </Nav.Link> */}
                   {/* <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}

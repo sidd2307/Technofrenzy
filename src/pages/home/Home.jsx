@@ -5,8 +5,10 @@ import Carousal from "../../components/Carousal";
 import Footer from "../../components/Footer";
 import NavBar from "../../components/NavBar";
 import Test from "../../components/Test";
+import useUserStore from "../../store";
 
 export default function Home() {
+  const { userInfo } = useUserStore();
   const code = `
   BinarySearch(A[0..N-1], value, low, high) {  
     if (high < low)  
@@ -20,6 +22,8 @@ export default function Home() {
        return mid // found
     }
     }`;
+
+  console.log(userInfo);
   return (
     <div>
       <NavBar />
